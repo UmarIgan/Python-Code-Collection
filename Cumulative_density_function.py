@@ -1,11 +1,11 @@
 
 #http://wiki.stat.ucla.edu/socr/index.php/AP_Statistics_Curriculum_2007_Pareto
-import math
-import random
-import statistics 
+import statistics
+import collections
 def cum_density(arr):
-    min_value = min(arr)
-    mode=statistics.mode(arr)
+    arr=collections.Counter(arr)
+    min_value = min(arr.values())
+    mode=statistics.mode(arr.values())
     emp_list=[]
     for num in arr:
         
@@ -13,12 +13,7 @@ def cum_density(arr):
     return emp_list
 
 arr=[3, 4, 6, 2, 5, 3, 6, 4, 6, 6, 9, 8, 7]
-o=cum_density(arr)
-ind=list(range(0, len(o)))
+cum_density(arr)
 
-#draw Cumulative density function
-fig = px.line(x=ind, y=o, title='cumilative_density_distrubiton')
-fig.show()
-#draw your array
-fig = px.line(x=ind, y=arr, title='array_distrubiton')
-fig.show()
+
+

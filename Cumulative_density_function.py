@@ -12,7 +12,7 @@ def cum_density(arr):
         emp_list.append(1- ((min_value/num)**mode))
     return emp_list
 
-
+arr=[3, 4, 6, 2, 5, 3, 6, 4, 6, 6, 9, 8, 7]
 o=cum_density(arr)
 ind=list(range(0, len(o)))
 

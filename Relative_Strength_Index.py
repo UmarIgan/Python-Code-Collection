@@ -19,5 +19,5 @@ def relativeStrength(array):
     mean_ups=mean(ups_arr[-14:])
 
     return mean_downs, mean_ups
-df=pd.read_csv('https://raw.githubusercontent.com/pytmar/cds_turkey/master/vix-daily_csv%20(1).csv')
+df=pd.read_csv('https://raw.githubusercontent.com/UmarIgan/cds_turkey/master/vix-daily_csv%20(1).csv')
 relativeStrength(df['VIX Close'].values)

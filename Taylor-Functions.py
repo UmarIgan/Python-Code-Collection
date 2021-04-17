@@ -1,3 +1,4 @@
+import numpy as np
 def der(x):#derivative function
     n=len(x)
     y=list(range(n))
